@@ -12,23 +12,24 @@
 
 
 ## 💻 Installation
-Add this in your app's build.gradle file:
-```groovy
-dependencies {
-  implementation 'me.abhinay.input:currency-edittext:1.1'
-}
-```
+To get a Git project into your build:
 
-Or add ClapFab as a new dependency inside your pom.xml
-
-```xml
-<dependency>
-  <groupId>me.abhinay.input</groupId>
-  <artifactId>currency-edittext</artifactId>
-  <version>1.1</version>
-  <type>pom</type>
-</dependency>
+Step 1. Add the JitPack repository to your build file
+Add it in your root build.gradle at the end of repositories:
 ```
+allprojects {
+		repositories {
+			...
+			maven { url 'https://jitpack.io' }
+		}
+	}
+ ```
+ Step 2. Add the dependency
+ ```
+ dependencies {
+	        implementation 'com.github.elias102:currency-edittext:Tag'
+	}
+ ```
 
 ## Implementation Sample
 
