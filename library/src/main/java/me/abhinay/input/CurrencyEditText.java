@@ -78,10 +78,10 @@ public class CurrencyEditText extends AppCompatEditText {
                             String formatted;
 
                             if (Decimals) {
-                                parsed = Double.parseDouble(cleanString);
+                                parsed = new BigDecimal(cleanString);
                                 formatted = NumberFormat.getCurrencyInstance().format((parsed / 100)).replace(NumberFormat.getCurrencyInstance().getCurrency().getSymbol(), currencyFormat);
                             } else {
-                                parsedInt = Integer.parseInt(cleanString);
+                                parsedInt = new BigInteger(cleanString);
                                 formatted = currencyFormat + NumberFormat.getNumberInstance(Locale.US).format(parsedInt);
                             }
 
