@@ -31,7 +31,7 @@ public class MainActivity extends AppCompatActivity {
         etInput.setCurrency(CurrencySymbols.USA);
         etInput.setDelimiter(false);
         etInput.setSpacing(false);
-        etInput.setDecimals(true);
+        etInput.setDecimals(false);
         etInput.setSeparator(".");
 
         btnProcess.setOnClickListener(new View.OnClickListener() {

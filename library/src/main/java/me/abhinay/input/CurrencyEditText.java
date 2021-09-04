@@ -81,7 +81,7 @@ public class CurrencyEditText extends AppCompatEditText {
 
                             if (Decimals) {
                                 parsed = new BigDecimal(cleanString);
-                                formatted = NumberFormat.getCurrencyInstance().format((parsed.divide(new BigDecimal("100"), BigDecimal.ROUND_UNNECESSARY))).replace(NumberFormat.getCurrencyInstance().getCurrency().getSymbol(), currencyFormat);
+                                formatted = NumberFormat.getCurrencyInstance().format((parsed.divide(new BigDecimal("100"), BigDecimal.ROUND_HALF_DOWN))).replace(NumberFormat.getCurrencyInstance().getCurrency().getSymbol(), currencyFormat);
                             } else {
                                 parsedInt = new BigInteger(cleanString);
                                 formatted = currencyFormat + NumberFormat.getNumberInstance(Locale.US).format(parsedInt);
