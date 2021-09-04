@@ -73,8 +73,8 @@ public class CurrencyEditText extends AppCompatEditText {
                                 }
                             }
 
-                            double parsed;
-                            int parsedInt;
+                            BigDecimal parsed;
+                            BigInteger parsedInt;
                             String formatted;
 
                             if (Decimals) {
